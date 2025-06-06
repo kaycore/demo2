@@ -136,7 +136,9 @@ const testimonialsSlider = () => {
   // Create dots
   testimonials.forEach((_, index) => {
     const dot = document.createElement("button");
-    dot.className = `w-3 h-3 rounded-full ${index === 0 ? "bg-orange-600" : "bg-gray-300"}`;
+    dot.className = `w-3 h-3 m-1 rounded-full ${index === 0 ? "bg-orange-600" : "bg-gray-300"}`;
+    dot.ariaChecked = `${index === 0 ? "true" : "false"}`;
+    dot.ariaLabel = "dot button";
     dot.role = "radio";
     dot.addEventListener("click", () => goToTestimonial(index));
     dotsContainer.appendChild(dot);
@@ -149,7 +151,8 @@ const testimonialsSlider = () => {
 
     // Update active dot
     dots.forEach((dot, index) => {
-      dot.className = `w-3 h-3 rounded-full ${index === currentIndex ? "bg-orange-600" : "bg-gray-300"}`;
+      dot.className = `w-3 h-3 m-1 rounded-full ${index === currentIndex ? "bg-orange-600" : "bg-gray-300"}`;
+      dot.ariaChecked = `${index === currentIndex ? "true" : "false"}`;
     });
   };
 
