@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Fonts */
+
+@font-face {
+  font-family: NotoSerif-Regular;
+  src: url("../fonts/NotoSerif-Regular.ttf");
+}
+@font-face {
+  font-family: NotoSerif-Bold;
+  src: url("../fonts/NotoSerif-Bold.ttf");
+}
+.noto-reg {
+  font-family: NotoSerif-Regular, "Noto Serif", Georgia, serif;
+  font-weight: 400;
+}
+.noto-bold {
+  font-family: NotoSerif-Bold, "Noto Serif", Georgia, serif;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: Roboto-Medium;
+  src: url("../fonts/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: Roboto-Bold;
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+.roboto-reg {
+  font-family: Roboto-Regular, Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+}
+.roboto-med {
+  font-family: Roboto-Medium, Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+}
+.roboto-bold {
+  font-family: Roboto-Bold, Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* Marquee Animation */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

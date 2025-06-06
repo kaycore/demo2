@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="demonstration page" />
+
+    <link rel="stylesheet" href="styles/output.css" />
+    <link rel="stylesheet" href="fontawesome/css/custom.min.css" />
+    <link rel="stylesheet" href="fontawesome/css/solid.min.css" />
+    <link rel="shortcut icon" href="images/microchip-solid.svg" type="image/x-icon" />
+
+    <script src="scripts/main.js" defer></script>
+
+    <title>QBIT - Code. Create. Elevate.</title>
+  </head>
+  <body class="roboto-reg mx-auto max-w-[1920px] bg-[url('../images/background-pattern.svg')] dark:bg-neutral-800 dark:bg-[url('../images/background-pattern-dark.svg')] dark:text-white">
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 hidden h-screen w-full bg-black/50">
+      <!-- Mobile Menu Content -->
+      <div class="h-full w-4/5 max-w-sm -translate-x-full bg-white shadow-lg transition-transform duration-300 ease-in-out dark:bg-neutral-800" id="mobile-menu-content">
+        <div class="flex h-full flex-col p-5">
+          <!-- Close Button -->
+          <div class="flex justify-end">
+            <button id="close-mobile-menu" class="text-2xl hover:text-orange-600">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <!-- Mobile Navigation -->
+          <nav class="mt-10 flex-1">
+            <ul class="space-y-6">
+              <li class="flex items-center border-b pb-2 text-orange-600 dark:border-neutral-600">
+                <i class="fa-solid fa-house mr-3 w-5 text-center"></i>
+                <a href="#">Home</a>
+              </li>
+              <li class="flex items-center border-b pb-2 dark:border-neutral-600">
+                <i class="fa-solid fa-circle-info mr-3 w-5 text-center"></i>
+                <a href="#">About Us</a>
+              </li>
+              <li class="flex items-center border-b pb-2 dark:border-neutral-600">
+                <i class="fa-solid fa-gears mr-3 w-5 text-center"></i>
+                <a href="#">Services</a>
+              </li>
+              <li class="flex items-center border-b pb-2 dark:border-neutral-600">
+                <i class="fa-solid fa-circle-question mr-3 w-5 text-center"></i>
+                <a href="#">FAQ</a>
+              </li>
+              <li class="flex items-center border-b pb-2 dark:border-neutral-600">
+                <i class="fa-solid fa-tags mr-3 w-5 text-center"></i>
+                <a href="#">Pricing</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Mobile Footer -->
+          <div class="mt-auto">
+            <button class="w-full rounded-full bg-orange-600 px-4 py-2 text-white hover:bg-orange-500">LOGIN</button>
+            <div class="mt-6 flex h-6 justify-center gap-5">
+              <img src="images/brands/twitter-brands.svg" alt="twitter" />
+              <img src="images/brands/facebook-brands.svg" alt="facebook" />
+              <img src="images/brands/instagram-brands.svg" alt="instagram" />
+              <img src="images/brands/github-brands.svg" alt="github" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header -->
+    <header class="px-5 sm:px-10 lg:px-30 xl:px-40">
+      <!-- header-inner -->
+      <div class="relative">
+        <!-- Nav -->
+        <nav class="right-0 left-0 py-3 md:absolute md:px-3 2xl:px-6 2xl:py-5">
+          <!-- nav-inner -->
+          <div class="flex justify-between">
+            <!-- brand logo and name -->
+            <a href="#" class="flex items-center gap-x-1 text-xl text-orange-600 md:ml-2">
+              <i class="fa-solid fa-microchip"></i>
+              <span class="roboto-bold">QBIT</span>
+            </a>
+            <div class="flex items-center">
+              <!-- nav-list -->
+              <ul class="mr-10 hidden gap-x-3 text-sm lg:flex xl:gap-x-5 2xl:gap-x-8 2xl:text-base" id="nav-list">
+                <li class="text-orange-600"><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Pricing</a></li>
+              </ul>
+              <!-- icon group -->
+              <div class="flex items-center gap-x-4 text-xl">
+                <button id="theme-btn"><i class="fa-solid fa-moon w-[24px] text-center hover:cursor-pointer" aria-label="theme switch"></i></button>
+                <button class="roboto-med w-[24px] select-none hover:cursor-pointer" id="lang-btn">En</button>
+                <button class="hidden rounded-full bg-orange-600 px-2 py-1.5 text-xs text-white hover:cursor-pointer hover:bg-orange-500 md:inline" id="login">LOGIN</button>
+                <span class="lg:hidden" id="mobile-menu-btn"><i class="fa-solid fa-bars"></i></span>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Hero -->
+        <section class="grid justify-center gap-y-1 md:grid-cols-10 md:gap-x-1">
+          <!-- visuals -->
+          <div class="order-2 mt-8 flex justify-center bg-linear-to-r from-orange-600/50 to-transparent md:order-1 md:col-span-4 md:m-0">
+            <!-- visuals-inner -->
+            <div class="flex flex-col gap-y-5 sm:p-5 md:mt-16 md:justify-between md:gap-y-0 md:py-16 lg:justify-around lg:pt-10 lg:pb-6 xl:mt-20 xl:pb-10 2xl:gap-y-8">
+              <div class="flex items-center sm:gap-x-3 2xl:gap-x-8">
+                <div class="flex aspect-square h-28 md:h-24 2xl:h-40">
+                  <img src="images/undraw_cloud-files_8upc.svg" alt="cloud files" />
+                </div>
+                <span class="w-fit text-sm select-none">Scale effortlessly with secure, lightning-fast cloud solutions built for growth</span>
+              </div>
+              <div class="flex items-center sm:gap-x-3 2xl:gap-x-8">
+                <div class="flex aspect-square h-28 md:h-24 2xl:h-40">
+                  <img src="images/undraw_mobile-testing_sm2l.svg" alt="mobile testing" />
+                </div>
+                <span class="w-fit text-sm select-none">Stay productive on the go with sleek, user-friendly mobile experiences</span>
+              </div>
+              <div class="flex items-center sm:gap-x-3 2xl:gap-x-8">
+                <div class="flex aspect-square h-28 md:h-24 2xl:h-40">
+                  <img src="images/undraw_secure-server_lz9x.svg" alt="secure server" />
+                </div>
+                <span class="w-fit text-sm select-none">Protect your data with enterprise-grade security you can trust</span>
+              </div>
+            </div>
+          </div>
+          <!-- text -->
+          <div class="order-1 md:order-2 md:col-span-6">
+            <!-- text-inner -->
+            <div class="pt-10 pb-6 md:mt-16 md:pl-[5vw] xl:mt-20 xl:pb-10">
+              <h1 class="noto-bold h-24 text-3xl leading-12 max-[498px]:mb-16 max-[391px]:mb-28 sm:mb-0 md:mb-16 xl:mb-20 xl:text-4xl xl:leading-14">
+                <p>The complete solution</p>
+                <p class="relative overflow-hidden">
+                  for teams that work
+                  <span class="inline-block text-orange-600 transition-all duration-500" id="sliding-words">smarter</span>
+                </p>
+              </h1>
+              <div class="my-10 flex flex-col xl:text-lg xl:leading-8">
+                <span>
+                  <i class="fa-solid fa-check mr-1 text-orange-600"></i>
+                  Designed for humans &mdash; no training required
+                </span>
+                <span>
+                  <i class="fa-solid fa-check mr-1 text-orange-600"></i>
+                  Cut process time by 60% with intelligent automation
+                </span>
+                <span>
+                  <i class="fa-solid fa-check mr-1 text-orange-600"></i>
+                  The last platform you'll ever need to buy
+                </span>
+              </div>
+              <!-- Newsletter -->
+              <div class="flex rounded-full border min-[450px]:w-96">
+                <input type="email" placeholder="Email" class="min-w-0 flex-1 pl-3 outline-0" id="newsletter-mail" />
+                <button class="m-0.5 rounded-full bg-orange-600 px-12 py-1.5 text-white hover:cursor-pointer hover:bg-orange-500" id="newsletter-next">Next</button>
+              </div>
+              <p class="mt-6 min-[450px]:w-96">Join our community! Get product updates, expert tips, and early access to <a href="#" class="roboto-med underline">new features</a></p>
+              <a href="#" class="roboto-med mt-4 inline-block underline">Already started signing up?</a>
+            </div>
+          </div>
+        </section>
+        <!-- Marquee container -->
+        <div class="relative w-full overflow-hidden mask-linear-[90deg,transparent_0%,black_5%,black_95%,transparent_100%] whitespace-nowrap text-orange-600">
+          <!-- Marquee content -->
+          <div class="inline-block animate-[marquee_15s_linear_infinite] py-10">
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/docker-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/html-5-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/python-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/gnu-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/freebsd-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/firefox-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/wordpress-color-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/css-3-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/bootstrap-fill-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/debian-svgrepo-com.svg" alt="" />
+            </span>
+          </div>
+
+          <!-- Marquee content -->
+          <div class="inline-block animate-[marquee_15s_linear_infinite] py-10" aria-hidden="true">
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/docker-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/html-5-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/python-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/gnu-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/freebsd-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/firefox-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/wordpress-color-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/css-3-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/bootstrap-fill-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/debian-svgrepo-com.svg" alt="" />
+            </span>
+          </div>
+
+          <!-- Marquee content -->
+          <div class="inline-block animate-[marquee_15s_linear_infinite] py-10" aria-hidden="true">
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/docker-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/html-5-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/python-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/gnu-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/freebsd-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/firefox-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/wordpress-color-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/css-3-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/bootstrap-fill-svgrepo-com.svg" alt="" />
+            </span>
+            <span class="mr-10 inline-block w-16">
+              <img src="images/brands/debian-svgrepo-com.svg" alt="" />
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main -->
+    <main class="px-5 sm:px-10 lg:px-30 xl:px-40">
+      <!-- Main-inner -->
+      <div>
+        <!-- Statistics -->
+        <section class="flex flex-col gap-y-20 py-20 md:flex-row">
+          <div class="flex flex-1 flex-col items-center p-3 duration-150 ease-out hover:-translate-y-6">
+            <div class="mb-3 p-3">
+              <img class="h-56" src="images/undraw_order-delivered_puaw.svg" alt="person delivering package" />
+            </div>
+            <div class="flex flex-col items-center">
+              <p class="roboto-bold mb-3 text-3xl">10,000+</p>
+              <p class="text-center text-gray-700 dark:text-gray-300">Projects Delivered</p>
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col items-center p-3 duration-150 ease-out hover:-translate-y-6">
+            <div class="mb-3 p-3">
+              <img class="h-56" src="images/undraw_in-no-time_ax6n.svg" alt="time management" />
+            </div>
+            <div class="flex flex-col items-center">
+              <p class="roboto-bold mb-3 text-3xl">99.9%</p>
+              <p class="text-center text-gray-700 dark:text-gray-300">Uptime for Mission-Critical Solutions</p>
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col items-center p-3 duration-150 ease-out hover:-translate-y-6">
+            <div class="mb-3 p-3">
+              <img class="h-56" src="images/undraw_business-deal_nx2n.svg" alt="business deal" />
+            </div>
+            <div class="flex flex-col items-center">
+              <p class="roboto-bold mb-3 text-3xl">500+</p>
+              <p class="text-center text-gray-700 dark:text-gray-300">Global Clients Trust Us</p>
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col items-center p-3 duration-150 ease-out hover:-translate-y-6">
+            <div class="mb-3 p-3">
+              <img class="h-56" src="images/undraw_world_bdnk.svg" alt="world" />
+            </div>
+            <div class="flex flex-col items-center">
+              <p class="roboto-bold mb-3 text-3xl">50+</p>
+              <p class="text-center text-gray-700 dark:text-gray-300">Countries Served</p>
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col items-center p-3 duration-150 ease-out hover:-translate-y-6">
+            <div class="mb-3 p-3">
+              <img class="h-56" src="images/undraw_experts_v2vy.svg" alt="experts and engineers" />
+            </div>
+            <div class="flex flex-col items-center">
+              <p class="roboto-bold mb-3 text-3xl">200+</p>
+              <p class="text-center text-gray-700 dark:text-gray-300">Expert Developers & Engineers</p>
+            </div>
+          </div>
+        </section>
+        <!-- testimonials -->
+        <section class="relative overflow-hidden py-20">
+          <!-- testi-wrapper -->
+          <div class="flex transition-transform duration-500 ease-in-out" id="testimonials-slider">
+            <!-- testi-card -->
+            <div class="flex w-full flex-shrink-0 flex-col items-center p-3">
+              <div class="mb-5 text-orange-600">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="mb-8 text-center xl:w-4/5 2xl:w-5/10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sapiente sequi voluptate ipsum. Dolore vitae autem possimus neque corporis inventore.</p>
+              <div class="mb-4">
+                <img class="w-40 rounded-full" src="images/alex-carter.jpg" alt="alex carter" />
+              </div>
+              <p class="roboto-med mb-1">Alex Carter</p>
+              <p class="text-sm text-gray-700 dark:text-gray-300">CTO at NexTech Solutions</p>
+            </div>
+            <!-- testi-card -->
+            <div class="flex w-full flex-shrink-0 flex-col items-center p-3">
+              <div class="mb-5 text-orange-600">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="mb-8 text-center xl:w-4/5 2xl:w-5/10">Sapiente tempora laboriosam id fuga ratione architecto unde autem debitis alias consectetur iusto fugiat voluptate, perspiciatis delectus consequatur, enim possimus?</p>
+              <div class="mb-4">
+                <img class="w-40 rounded-full" src="images/priya-mehta.jpg" alt="proya mehta" />
+              </div>
+              <p class="roboto-med mb-1">Priya Mehta</p>
+              <p class="text-sm text-gray-700 dark:text-gray-300">Product Manager at SwiftScale</p>
+            </div>
+            <!-- testi-card -->
+            <div class="flex w-full flex-shrink-0 flex-col items-center p-3">
+              <div class="mb-5 text-orange-600">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="mb-8 text-center xl:w-4/5 2xl:w-5/10">Recusandae maiores eum error quam pariatur minima assumenda dolorum commodi, quis laudantium quaerat aliquam, optio consequuntur? Quidem praesentium suscipit architecto?</p>
+              <div class="mb-4">
+                <img class="w-40 rounded-full" src="images/marcus-raynolds.jpg" alt="marcus raynolds" />
+              </div>
+              <p class="roboto-med mb-1">Marcus Reynolds</p>
+              <p class="text-sm text-gray-700 dark:text-gray-300">Director of IT at Vertex Systems</p>
+            </div>
+            <!-- testi-card -->
+            <div class="flex w-full flex-shrink-0 flex-col items-center p-3">
+              <div class="mb-5 text-orange-600">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="mb-8 text-center xl:w-4/5 2xl:w-5/10">Illum, animi! Nesciunt nostrum ullam alias facilis, nulla aliquid debitis eligendi cum dignissimos recusandae iure, aspernatur facere atque fuga adipisci.</p>
+              <div class="mb-4">
+                <img class="w-40 rounded-full" src="images/sophia-nguyen.jpg" alt="sophia nguyen" />
+              </div>
+              <p class="roboto-med mb-1">Sophia Nguyen</p>
+              <p class="text-sm text-gray-700 dark:text-gray-300">CEO at CloudHive</p>
+            </div>
+            <!-- testi-card -->
+            <div class="flex w-full flex-shrink-0 flex-col items-center p-3">
+              <div class="mb-5 text-orange-600">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="mb-8 text-center xl:w-4/5 2xl:w-5/10">Ea, voluptate dolorem fugit culpa pariatur consequatur, doloribus, qui voluptatum expedita adipisci accusamus nisi nobis dolore veniam voluptates amet totam.</p>
+              <div class="mb-4">
+                <img class="w-40 rounded-full" src="images/david-okafor.jpg" alt="david okafor" />
+              </div>
+              <p class="roboto-med mb-1">David Okafor</p>
+              <p class="text-sm text-gray-700 dark:text-gray-300">Lead Developer at DataForge</p>
+            </div>
+          </div>
+          <!-- navigation buttons -->
+          <button id="testi-prev" aria-label="previous testimonial" class="absolute top-1/2 left-5 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white p-2 shadow-md hover:bg-gray-100">
+            <i class="fa-solid fa-chevron-left text-orange-600"></i>
+          </button>
+          <button id="testi-next" aria-label="next testimonial" class="absolute top-1/2 right-5 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white p-2 shadow-md hover:bg-gray-100">
+            <i class="fa-solid fa-chevron-right text-orange-600"></i>
+          </button>
+          <!-- dots indicator -->
+          <div class="mt-8 flex justify-center gap-2" id="testi-dots" role="radiogroup">
+            <!-- dots will be added by JavaScript -->
+          </div>
+        </section>
+        <!-- Success -->
+        <section class="grid gap-y-10 py-20 md:grid-cols-2 md:gap-x-5 lg:gap-x-10">
+          <div class="w-full">
+            <img class="object-contain" src="images/success.jpg" alt="success story" />
+          </div>
+          <div>
+            <p class="mb-5">Qbit delivers smart, scalable software to streamline your business and drive growth. From custom development to AI-powered tools, we build secure, user-friendly solutions tailored to your needs. Let's transform your vision into reality—discover how Qbit can accelerate your success.</p>
+            <button class="border-2 border-orange-600 px-3 py-2 text-orange-600 hover:cursor-pointer hover:bg-orange-600 hover:text-white">View All Services</button>
+          </div>
+        </section>
+        <!-- Evaluation -->
+        <section class="grid gap-y-10 py-20 lg:grid-cols-2">
+          <!-- text-wrapper -->
+          <div class="flex flex-col gap-6">
+            <h2 class="noto-bold mb-5 w-[90%] text-3xl leading-12 2xl:text-5xl 2xl:leading-14">Evaluate and compare performance of your business's competitors</h2>
+            <div>
+              <i class="fa-solid fa-circle-check mr-2 text-xl text-orange-600"></i>
+              <span class="text-lg 2xl:text-xl">Traffic Volume</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-circle-check mr-2 text-xl text-orange-600"></i>
+              <span class="text-lg 2xl:text-xl">Traffic Sources</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-circle-check mr-2 text-xl text-orange-600"></i>
+              <span class="text-lg 2xl:text-xl">Desktop vs. Mobile Traffic</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-circle-check mr-2 text-xl text-orange-600"></i>
+              <span class="text-lg 2xl:text-xl">Geo Distribution</span>
+            </div>
+          </div>
+          <!-- image-wrapper -->
+          <div class="grid grid-cols-3 gap-5 md:gap-10">
+            <div class="col-span-2">
+              <img src="images/chart.jpg" alt="chart" />
+            </div>
+            <div class="flex aspect-square items-center justify-center">
+              <img src="images/undraw_personal-goals_f9bb.svg" alt="goals" />
+            </div>
+            <div class="col-span-3">
+              <img src="images/pie.jpg" alt="pie" />
+            </div>
+          </div>
+        </section>
+        <!-- Steps -->
+        <section class="grid gap-x-3 py-20 md:grid-cols-2">
+          <div class="mb-3 md:mb-0">
+            <h2 class="noto-bold mb-3 text-2xl">How Do I Automate My Business Workflows?</h2>
+            <p class="max-w-2xl text-gray-700 dark:text-gray-300">Whether you're new to process automation or looking to optimize existing systems, follow these steps to streamline your operations with Qbit's solutions:</p>
+          </div>
+          <div class="mt-10 md:mt-0">
+            <div>
+              <h3 class="roboto-med mb-3 text-lg"><span class="text-orange-600">Step 1</span>: Define Your Automation Goals</h3>
+              <p>Identify inefficiencies in your workflow by asking:</p>
+              <ul class="mt-3 list-[square] space-y-1 pl-3 text-sm">
+                <li>Which repetitive tasks consume the most time? (e.g., data entry, report generation)</li>
+                <li>What outcomes do I want? (e.g., faster approvals, reduced errors)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-10">
+            <h3 class="roboto-med mb-3 text-lg"><span class="text-orange-600">Step 2</span>: Choose the Right Qbit Tools</h3>
+            <p>Select from our suite of software designed for automation:</p>
+            <ul class="mt-3 list-[square] space-y-1 pl-3 text-sm">
+              <li>Qbit Flow: Drag-and-drop workflow builder</li>
+              <li>Qbit Sync: Real-time data integration across platforms</li>
+              <li>Qbit AI Assist: Smart automation for customer support</li>
+            </ul>
+          </div>
+          <div class="mt-10">
+            <h3 class="roboto-med mb-3 text-lg"><span class="text-orange-600">Step 3</span>: Implement and Test</h3>
+            <ul class="mt-3 list-[square] space-y-1 pl-3 text-sm">
+              <li>Map your workflow in Qbit Flow's visual editor.</li>
+              <li>Connect your apps using Qbit Sync (e.g., CRM, ERP, email).</li>
+              <li>Run pilot tests with a small team to refine rules.</li>
+            </ul>
+          </div>
+          <div class="mt-10">
+            <h3 class="roboto-med mb-3 text-lg"><span class="text-orange-600">Step 4</span>: Monitor and Optimize</h3>
+            <ul class="mt-3 list-[square] space-y-1 pl-3 text-sm">
+              <li>Use Qbit Analytics to track time/cost savings.</li>
+              <li>Adjust triggers or rules based on performance data.</li>
+            </ul>
+          </div>
+          <div class="mt-10">
+            <h3 class="roboto-med mb-3 text-lg"><span class="text-orange-600">Step 5</span>: Scale Across Your Organization</h3>
+            <p>Roll out automation company-wide and train teams with Qbit's onboarding resources.</p>
+          </div>
+          <div class="mt-10 md:col-span-2">
+            <p class="text-sm">
+              Need guidance?
+              <a href="#" class="roboto-med underline">Book a demo</a> or explore our
+              <a href="#" class="roboto-med underline">Automation Guides</a>
+            </p>
+          </div>
+        </section>
+        <!-- News -->
+        <section class="grid py-20">
+          <!-- cards-wrapper -->
+          <div class="mb-32 grid gap-y-32 lg:grid-cols-3 lg:gap-x-5">
+            <!-- news card -->
+            <div class="flex w-full flex-col items-center">
+              <!-- news card image -->
+              <div class="w-full">
+                <img class="object-contain" src="images/ai.jpg" alt="AI" />
+              </div>
+              <!-- news card text -->
+              <div class="group -m-16 h-56 w-4/5 overflow-y-auto bg-white p-3 shadow-xl duration-150 ease-out hover:scale-110 sm:-m-8 dark:text-black">
+                <p class="noto-bold mb-6 text-lg group-hover:text-orange-600 hover:cursor-pointer">The Future of AI in Enterprise Software</p>
+                <p>Discover how AI-driven automation is reshaping business workflows—and what your organization needs to adopt now to stay competitive.</p>
+              </div>
+            </div>
+            <!-- news card -->
+            <div class="flex w-full flex-col items-center">
+              <!-- news card image -->
+              <div class="w-full">
+                <img class="object-contain" src="images/devops.jpg" alt="devops" />
+              </div>
+              <!-- news card text -->
+              <div class="group -m-16 h-56 w-4/5 overflow-y-auto bg-white p-3 shadow-xl duration-150 ease-out hover:scale-110 sm:-m-8 dark:text-black">
+                <p class="noto-bold mb-6 text-lg group-hover:text-orange-600 hover:cursor-pointer">DevOps Best Practices for Faster Releases</p>
+                <p>Reduce deployment risks and accelerate time-to-market with proven DevOps strategies from industry leaders.</p>
+              </div>
+            </div>
+            <!-- news card -->
+            <div class="flex w-full flex-col items-center">
+              <!-- news card image -->
+              <div class="w-full">
+                <img class="object-contain" src="images/cybersec.jpg" alt="" />
+              </div>
+              <!-- news card text -->
+              <div class="group -m-16 h-56 w-4/5 overflow-y-auto bg-white p-3 shadow-xl duration-150 ease-out hover:scale-110 sm:-m-8 dark:text-black">
+                <p class="noto-bold mb-6 text-lg group-hover:text-orange-600 hover:cursor-pointer">Cybersecurity Trends You Can't Afford to Ignore</p>
+                <p>From zero-trust frameworks to ransomware resilience, learn how to fortify your software against evolving threats.</p>
+              </div>
+            </div>
+          </div>
+          <button class="roboto-med mx-auto w-fit rounded-full border-2 border-orange-600 px-6 py-3 text-orange-600 capitalize hover:cursor-pointer hover:bg-orange-600 hover:text-white">Check out all articles</button>
+        </section>
+        <!-- Office -->
+        <section class="grid py-20 lg:grid-cols-2 lg:gap-x-10 xl:gap-x-0">
+          <div class="mb-16 w-full lg:mb-0 lg:max-w-96">
+            <img class="object-contain" src="images/office.jpg" alt="office" />
+          </div>
+          <div class="flex flex-col gap-y-8 lg:my-auto">
+            <div>
+              <h4 class="noto-bold mb-3 text-lg">
+                <i class="fa-solid fa-handshake-simple mr-3"></i>
+                Collaborative Culture
+              </h4>
+              <p class="text-gray-700 dark:text-gray-300">We encourage open communication and teamwork, where every voice is valued. By working together across departments, we build stronger solutions and create a sense of shared purpose.</p>
+            </div>
+            <div>
+              <h4 class="noto-bold mb-3 text-lg">
+                <i class="fa-solid fa-briefcase mr-3"></i>
+                Work-Life Balance
+              </h4>
+              <p class="text-gray-700 dark:text-gray-300">Happy employees lead to great results. We support flexible schedules, remote work options, and wellness initiatives to help our team maintain a healthy balance between professional and personal life.</p>
+            </div>
+            <div>
+              <h4 class="noto-bold mb-3 text-lg">
+                <i class="fa-solid fa-seedling mr-3"></i>
+                Growth & Recognition
+              </h4>
+              <p class="text-gray-700 dark:text-gray-300">We invest in our people through continuous learning opportunities, mentorship programs, and regular recognition of achievements. Your growth is our success, and we celebrate every milestone along the way.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="px-5 pt-20 sm:px-10 lg:px-30 xl:px-40">
+      <!-- Footer-inner -->
+      <div class="2xl:px-28">
+        <div class="flex flex-col items-center">
+          <h1 class="noto-bold mb-10 text-center text-4xl leading-12 2xl:w-[75%]">Drop us a line or two, we are open for creative minds and collaborations!</h1>
+          <button class="roboto-med rounded-xl bg-orange-600 px-7 py-2.5 text-white hover:cursor-pointer hover:bg-orange-500">Contact Team</button>
+        </div>
+        <div class="my-20 flex flex-col items-center gap-y-10 lg:flex-row lg:justify-between">
+          <a href="#" class="roboto-bold text-2xl text-orange-600">
+            <i class="fa-solid fa-microchip"></i>
+            QBIT
+          </a>
+          <div>
+            <ul class="flex gap-8">
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Features</a>
+              </li>
+              <li>
+                <a href="#">Projects</a>
+              </li>
+              <li>
+                <a href="#">Support</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex h-6 gap-6">
+            <img src="images/brands/twitter-brands.svg" class="hover:cursor-pointer" alt="twitter" />
+            <img src="images/brands/facebook-brands.svg" class="hover:cursor-pointer" alt="facebook" />
+            <img src="images/brands/instagram-brands.svg" class="hover:cursor-pointer" alt="instagram" />
+            <img src="images/brands/github-brands.svg" class="hover:cursor-pointer" alt="github" />
+          </div>
+        </div>
+        <div class="mb-14 flex flex-col items-center gap-y-5 lg:flex-row lg:justify-between">
+          <div>
+            <span>&copy; Copyright 2025, All Rights Reserved</span>
+          </div>
+          <div class="flex gap-5">
+            <span class="hover:cursor-pointer">Privacy Policy</span>
+            <span class="hover:cursor-pointer">Terms &amp; Conditions</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Sign In Modal -->
+    <div id="signin-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50">
+      <div class="relative w-full max-w-md rounded-lg bg-white p-8 shadow-xl dark:bg-neutral-800">
+        <button id="close-modal" class="absolute top-4 right-4 text-2xl hover:text-orange-600">&times;</button>
+        <h2 class="noto-bold mb-6 text-2xl">Sign In</h2>
+        <form id="signin-form" class="flex flex-col gap-y-4">
+          <div>
+            <label for="email" class="mb-1 block text-sm">Email</label>
+            <input type="email" id="email" required class="w-full rounded border p-2" placeholder="your@email.com" />
+          </div>
+          <div>
+            <label for="password" class="mb-1 block text-sm">Password</label>
+            <input type="password" id="password" required class="w-full rounded border p-2" placeholder="••••••••" />
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <input type="checkbox" id="remember" class="mr-2" />
+              <label for="remember" class="text-sm">Remember me</label>
+            </div>
+            <a href="#" class="text-sm text-orange-600 hover:underline">Forgot password?</a>
+          </div>
+          <button type="submit" class="mt-4 rounded bg-orange-600 py-2 text-white hover:bg-orange-500">Sign In</button>
+          <p class="text-center text-sm">
+            Don't have an account?
+            <a href="#" class="text-orange-600 hover:underline">Sign up</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <!-- Newsletter Modal -->
+    <div id="newsletter-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50">
+      <div class="relative w-full max-w-md rounded-lg bg-white p-8 shadow-xl dark:bg-neutral-800">
+        <button id="close-newsletter-modal" class="absolute top-4 right-4 text-2xl hover:text-orange-600">&times;</button>
+        <div class="flex flex-col items-center text-center">
+          <i class="fa-solid fa-envelope-circle-check mb-4 text-5xl text-orange-600"></i>
+          <h2 class="noto-bold mb-4 text-2xl">Join Our Newsletter</h2>
+          <p class="mb-6 text-gray-700 dark:text-gray-300">Stay updated with the latest news, product updates, and exclusive offers from QBIT.</p>
+        </div>
+        <form id="newsletter-form" class="flex flex-col gap-y-4">
+          <div>
+            <label for="newsletter-email" class="mb-1 block text-sm">Email Address</label>
+            <input type="email" id="newsletter-email" required class="w-full rounded border p-2" placeholder="your@email.com" />
+          </div>
+          <div>
+            <label for="newsletter-name" class="mb-1 block text-sm">Name (Optional)</label>
+            <input type="text" id="newsletter-name" class="w-full rounded border p-2" placeholder="Your name" />
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" id="newsletter-consent" required class="mr-2" />
+            <label for="newsletter-consent" class="text-sm">I agree to receive emails from QBIT</label>
+          </div>
+          <button type="submit" class="mt-4 rounded bg-orange-600 py-2 text-white hover:bg-orange-500">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
