@@ -4,45 +4,43 @@
 /* Fonts */
 
 @font-face {
-  font-family: NotoSerif-Regular;
-  src: url("../fonts/NotoSerif-Regular.ttf");
-}
-@font-face {
-  font-family: NotoSerif-Bold;
+  font-family: "Noto Serif Bold";
   src: url("../fonts/NotoSerif-Bold.ttf");
 }
-.noto-reg {
-  font-family: NotoSerif-Regular, "Noto Serif", Georgia, serif;
-  font-weight: 400;
-}
+
 .noto-bold {
-  font-family: NotoSerif-Bold, "Noto Serif", Georgia, serif;
+  font-family: "Noto Serif Bold", serif;
   font-weight: 700;
 }
 
 @font-face {
-  font-family: Roboto-Regular;
-  src: url("../fonts/Roboto-Regular.ttf");
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-VariableFont_wdth\,wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
 }
-@font-face {
-  font-family: Roboto-Medium;
-  src: url("../fonts/Roboto-Medium.ttf");
-}
-@font-face {
-  font-family: Roboto-Bold;
-  src: url("../fonts/Roboto-Bold.ttf");
-}
+
 .roboto-reg {
-  font-family: Roboto-Regular, Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 .roboto-med {
-  font-family: Roboto-Medium, Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 .roboto-bold {
-  font-family: Roboto-Bold, Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
 /* Marquee Animation */
